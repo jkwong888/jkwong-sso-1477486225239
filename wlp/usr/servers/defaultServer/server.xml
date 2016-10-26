@@ -1,0 +1,19 @@
+<server>
+    <featureManager>
+        <feature>javaee-7.0</feature>
+    </featureManager>
+    <httpEndpoint id='defaultHttpEndpoint' host="*" httpPort="${port}"/>
+    <keyStore id="defaultKeyStore" password="changeit" />
+    <webContainer extractHostHeaderPort="true" trustHostHeaderPort="true"/>
+    <httpDispatcher enableWelcomePage="false"/>
+    <applicationMonitor dropinsEnabled="false" updateTrigger="mbean"/>
+    <config updateTrigger="mbean"/>
+    <application name='JavaHelloWorldApp' location='JavaHelloWorldApp.war' type='war' context-root='/'>
+        <application-bnd>
+            <security-role name="all">
+                <special-subject type="ALL_AUTHENTICATED_USERS"/>
+            </security-role>
+        </application-bnd>
+    </application>
+
+</server>
