@@ -7,4 +7,4 @@ applications:
   host: jkwong-sso
   disk_quota: 1024M
   services:
-  - Single Sign On-st
+  - Single Sign On-dv
